@@ -4,120 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Muhammad Junaid Baig — Cover Letter</title>
-  <style>
-    :root {
-      --bg:#0d1117;          /* deep navy background */
-      --card:#161b22;        /* card background */
-      --accent:#4f46e5;      /* indigo accent */
-      --accent-light:#6366f1;
-      --muted:#9ca3af;       /* muted gray */
-      --text:#f3f4f6;        /* light text */
-    }
-    * { box-sizing:border-box; }
-    body {
-      margin:0;
-      font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      background:linear-gradient(180deg,#0d1117 0%, #111827 100%);
-      color:var(--text);
-      -webkit-font-smoothing:antialiased;
-    }
-    .wrap {
-      max-width:900px;
-      margin:40px auto;
-      padding:28px;
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,0.05);
-      box-shadow:0 8px 30px rgba(0,0,0,0.6);
-    }
-    header {
-      display:flex;
-      align-items:center;
-      gap:18px;
-      border-bottom:1px solid rgba(255,255,255,0.08);
-      padding-bottom:16px;
-    }
-    .avatar {
-      width:84px;
-      height:84px;
-      border-radius:12px;
-      background:linear-gradient(135deg,var(--accent),var(--accent-light));
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-weight:700;
-      font-size:22px;
-      color:#fff;
-    }
-    h1 { margin:0; font-size:22px; }
-    p.lead { margin:6px 0 0; color:var(--muted); }
-    main {
-      display:grid;
-      grid-template-columns:1fr 300px;
-      gap:22px;
-      margin-top:20px;
-    }
-    .card {
-      background:var(--card);
-      padding:20px;
-      border-radius:12px;
-      border:1px solid rgba(255,255,255,0.05);
-    }
-    .cover {
-      line-height:1.7;
-      font-size:15px;
-    }
-    .cover h2 {
-      margin-top:0;
-      color:var(--accent-light);
-      font-size:18px;
-    }
-    aside { position:relative; }
-    .contact-list {
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-      font-size:14px;
-    }
-    .btn {
-      display:inline-block;
-      padding:10px 14px;
-      border-radius:10px;
-      background:var(--accent);
-      color:#fff;
-      text-decoration:none;
-      font-weight:600;
-      transition:background 0.2s;
-    }
-    .btn:hover { background:var(--accent-light); }
-    .ghost {
-      background:transparent;
-      border:1px solid rgba(255,255,255,0.2);
-      color:var(--text);
-      padding:8px 12px;
-      border-radius:10px;
-      text-decoration:none;
-      font-size:14px;
-      transition:all 0.2s;
-    }
-    .ghost:hover { border-color:var(--accent-light); color:var(--accent-light); }
-    footer {
-      margin-top:24px;
-      text-align:center;
-      color:var(--muted);
-      font-size:13px;
-    }
-    code {
-      background:rgba(255,255,255,0.08);
-      padding:2px 6px;
-      border-radius:6px;
-      font-size:12px;
-    }
-    @media (max-width:820px) {
-      main { grid-template-columns:1fr; }
-      aside { order:-1; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="wrap">
@@ -152,23 +39,23 @@
 
         <p>Sincerely,<br><strong>Muhammad Junaid Baig</strong></p>
 
-        <hr style="border:none;border-top:1px solid rgba(255,255,255,0.1);margin:18px 0">
+        <hr class="divider">
 
-        <p style="font-size:13px;color:var(--muted)">
+        <p class="quick-highlights">
           Quick highlights: <code>ArcGIS/QGIS</code> • <code>Python Automation</code> • <code>Google Earth Engine</code> • <code>Cadastral Mapping</code>
         </p>
       </section>
 
       <aside>
         <div class="card">
-          <h3 style="margin-top:0;color:var(--accent-light)">Contact</h3>
+          <h3 class="card-title">Contact</h3>
           <div class="contact-list">
-            <div><strong>Email:</strong> <a href="mailto:mirzajunaid887@gmail.com" style="color:var(--text)">mirzajunaid887@gmail.com</a></div>
+            <div><strong>Email:</strong> <a href="mailto:mirzajunaid887@gmail.com" class="link">mirzajunaid887@gmail.com</a></div>
             <div><strong>Phone:</strong> +92 304 733 5971</div>
-            <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/muhammad-junaid-baig-38b102247?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" style="color:var(--text)">View profile</a></div>
+            <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/muhammad-junaid-baig-38b102247" target="_blank" class="link">View profile</a></div>
           </div>
 
-          <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
+          <div class="action-row">
             <a class="btn" id="downloadPdf" href="CV.pdf" download>Download Resume (PDF)</a>
             <a class="ghost" id="copyEmail">Copy Email</a>
           </div>
@@ -176,22 +63,23 @@
       </aside>
     </main>
 
+    <!-- Projects Section -->
+    <section class="card projects">
+      <h2>Projects</h2>
+
+      <!-- Add projects by title and detail only; images auto-map from /maps folder -->
+      <div class="project" data-title="Urban Growth Mapping of Australia" data-detail="Analyzed urban expansion using Landsat and Google Earth Engine. Produced city-level growth trend maps and change detection outputs."></div>
+
+      <div class="project" data-title="Cadastral Mapping Rawalpindi" data-detail="Digitized and georeferenced Khasra sheets into parcel layers, enabling land-administration workflows and spatial QA."></div>
+
+      <div class="project" data-title="FTTH Network Planning Baluchistan" data-detail="Identified underserved areas, optimized fiber routes, and produced rollout maps to support stakeholder decisions."></div>
+    </section>
+
     <footer>
       © 2025 Muhammad Junaid Baig — All Rights Reserved
     </footer>
   </div>
 
-  <script>
-    document.getElementById('copyEmail').addEventListener('click', function(){
-      navigator.clipboard.writeText('mirzajunaid887@gmail.com').then(()=>{
-        const el = document.createElement('span');
-        el.textContent = 'Copied!';
-        el.style.marginLeft='8px';
-        el.style.color='var(--accent-light)';
-        this.parentNode.appendChild(el);
-        setTimeout(()=>el.remove(),1500);
-      });
-    });
-  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>
